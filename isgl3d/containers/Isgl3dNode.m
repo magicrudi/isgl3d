@@ -47,6 +47,7 @@ static Isgl3dOcclusionMode Isgl3dNode_OcclusionMode = Isgl3dOcclusionQuadDistanc
 
 @implementation Isgl3dNode
 
+@synthesize tag = _tag;
 @synthesize worldTransformation = _worldTransformation;
 @synthesize parent = _parent;
 @synthesize children = _children;

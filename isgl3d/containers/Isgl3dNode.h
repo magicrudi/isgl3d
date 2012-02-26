@@ -111,7 +111,14 @@
 	Isgl3dNode * _parent;
 
 	BOOL _hasChildren;
+    
+    id _tag;
 }
+
+/**
+ * To identify a spefic node assign a unique tag.
+ */
+@property (nonatomic, retain) id tag;
 
 /**
  * Returns the world transformation of the node.
