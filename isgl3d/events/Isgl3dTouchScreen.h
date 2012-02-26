@@ -57,6 +57,8 @@
  */
 + (void) resetInstance;
 
+- (bool) hasResponder:(id <Isgl3dTouchScreenResponder>)responder;
+
 /*
  * Adds a new object that implements the Isgl3dTouchScreenResponder protocol to the array of responders. All touch events
  * will subsequently be forwarded to this object.

@@ -64,6 +64,16 @@ static Isgl3dTouchScreen * _instance = nil;
 	}
 }
 
+- (bool) hasResponder:(id <Isgl3dTouchScreenResponder>)responder
+{
+    for (Isgl3dViewTouchResponder * viewResponder in _responders) {
+		if (viewResponder.responder == responder) {
+			return true;
+		}
+	}
+    return false;
+}
+
 - (void) addResponder:(id <Isgl3dTouchScreenResponder>)responder {
 	[_responders addObject:[Isgl3dViewTouchResponder responderWithResponder:responder]];
 }
