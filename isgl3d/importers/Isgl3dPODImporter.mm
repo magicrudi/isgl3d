@@ -68,6 +68,16 @@
 
 
 @synthesize podScene = _podScene;
+@synthesize meshes = _meshes;
+@synthesize meshNodes = _meshNodes;
+@synthesize boneNodes = _boneNodes;
+@synthesize indexedNodes = _indexedNodes;
+@synthesize boneNodeIndices = _boneNodeIndices;
+@synthesize textures = _textures;
+@synthesize materials = _materials;
+@synthesize cameras = _cameras;
+@synthesize lights = _lights;
+@synthesize textureMods = _textureMods;
 
 + (id) podImporterWithFile:(NSString *)path {
 	return [[[self alloc] initWithFile:path] autorelease];

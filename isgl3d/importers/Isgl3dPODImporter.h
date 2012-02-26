@@ -86,9 +86,30 @@ class CPVRTModelPOD;
 	BOOL _buildMeshNodesComplete;
 	BOOL _boneBuildComplete;
 	BOOL _meshesAndMaterialsComplete;
+    
 }
 
-@property CPVRTModelPOD* podScene;
+@property (nonatomic, readonly) CPVRTModelPOD* podScene;
+
+@property (nonatomic, readonly) NSArray* meshes;
+
+@property (nonatomic, readonly) NSDictionary* meshNodes;
+
+@property (nonatomic, readonly) NSDictionary* boneNodes;
+
+@property (nonatomic, readonly) NSDictionary* indexedNodes;
+
+@property (nonatomic, readonly) NSArray* boneNodeIndices;
+
+@property (nonatomic, readonly) NSArray* textures;
+
+@property (nonatomic, readonly) NSArray* materials;
+
+@property (nonatomic, readonly) NSArray* cameras;
+
+@property (nonatomic, readonly) NSArray* lights;
+
+@property (nonatomic, readonly) NSDictionary* textureMods;
 
 /**
  * Allocates and initialises (autorelease) importer with the POD data file path.
@@ -112,6 +133,7 @@ class CPVRTModelPOD;
  * @return The number of meshes in the scene.
  */
 - (unsigned int) numberOfMeshes;
+
 
 /**
  * Returns the number of cameras in the scene.
