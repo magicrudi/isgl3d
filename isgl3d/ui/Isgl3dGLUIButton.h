@@ -56,6 +56,10 @@
  */
 + (id) buttonWithMaterial:(Isgl3dMaterial *)material;
 
+
++ (id) buttonWithMesh:(Isgl3dGLMesh *)mesh andMaterial:(Isgl3dMaterial*)material;
+
+
 /**
  * Initialises the button with a material and a button width and height in pixels.
  * @param material The material to be rendered on the button.
@@ -69,6 +73,7 @@
  * @param material The material to be rendered on the button.
  */
 - (id) initWithMaterial:(Isgl3dMaterial *)material;
+
 
 /**
  * Creates and adds an user touch event listener to the button.
